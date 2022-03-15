@@ -4,10 +4,12 @@ package dio.desafiobanco;
 public interface IConta {
 
     //obs: todos os métodos da interface são públicos, dessa forma se torna redundante declarar os métodos como public
-    /*public*/ void sacar(double valor);
+    void sacar(double valor);
 
     void depositar(double valor);
 
     void transferir(double valor, Conta contaDestino);
+
+    void imprimirExtrato();
 
 }
