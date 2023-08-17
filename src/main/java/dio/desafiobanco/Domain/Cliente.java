@@ -1,4 +1,4 @@
-package dio.desafiobanco;
+package dio.desafiobanco.Domain;
 
 public class Cliente {
 

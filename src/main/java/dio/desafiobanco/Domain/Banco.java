@@ -1,4 +1,5 @@
-package dio.desafiobanco;
+package dio.desafiobanco.Domain;
+
 import java.util.List;
 
 public class Banco {

@@ -1,4 +1,4 @@
-package dio.desafiobanco;
+package dio.desafiobanco.Domain;
 
 public abstract class Conta implements IConta {
 
@@ -16,22 +16,6 @@ public abstract class Conta implements IConta {
         this.cliente = cliente;
     }
 
-    @Override
-    public void sacar(double valor) {
-        saldo -= valor;
-    }
-
-    @Override
-    public void depositar(double valor) {
-        saldo += valor;
-    }
-
-    @Override
-    public void transferir(double valor, Conta contaDestino) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
-    }
-
     //getters: apenas getters pois não faz sentido alterar os dados dessa classe já que são dados importante do mundo real
     public int getAgencia() {
         return agencia;
@@ -44,12 +28,9 @@ public abstract class Conta implements IConta {
     public double getSaldo() {
         return saldo;
     }
-
-    protected void imprimirAtributos() {
-        System.out.println(String.format("Titular: %s", this.cliente.getNome()));
-        System.out.println(String.format("Agencia: %d", this.agencia));
-        System.out.println(String.format("Número: %d", this.numero));
-        System.out.println(String.format("Agencia: %.2f", this.saldo));
+    
+    public Cliente getCliente() {
+    	return cliente;
     }
 
 }
